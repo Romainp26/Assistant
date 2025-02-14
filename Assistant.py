@@ -21,6 +21,8 @@ models = ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"]
 
 # Create a select box for the models
 st.session_state["openai_model"] = st.sidebar.selectbox("Select OpenAI model", models, index=0)
+model=st.session_state["openai_model"]
+
 
 
 # initialize chat session in streamlit if not already present
@@ -46,7 +48,7 @@ if user_prompt:
 
     # send user's message to GPT-4o and get a response
     response = openai.chat.completions.create(
-        model="gpt-4o",
+        model=model,
         messages=[
             {"role": "system", "content": "You are a helpful assistant"},
             *st.session_state.chat_history
