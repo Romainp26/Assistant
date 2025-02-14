@@ -11,17 +11,24 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # configuring streamlit page settings
 st.set_page_config(
-    page_title="GPT-4o Chat",
+    page_title="Best Assistant",
     page_icon="💬",
     layout="centered"
 )
+
+# List of models
+models = ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"]
+
+# Create a select box for the models
+st.session_state["openai_model"] = st.sidebar.selectbox("Select OpenAI model", models, index=0)
+
 
 # initialize chat session in streamlit if not already present
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 # streamlit page title
-st.title("🤖 GPT-4o - ChatBot")
+st.title("🤖 Best Assistant")
 
 # display chat history
 for message in st.session_state.chat_history:
