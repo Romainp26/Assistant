@@ -1,3 +1,11 @@
+openai
+python-dotenv
 streamlit
 langchain
-langchain-community
+langchain_core
+langchain_openai
+pandas
+PyPDF2
+easyocr
+numpy
+matplotlib
