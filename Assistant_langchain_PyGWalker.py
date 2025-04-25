@@ -12,6 +12,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pygwalker.api.streamlit import StreamlitRenderer
 
+# Streamlit Layout
+st.set_page_config(layout="wide")
 
 # configuring openai - api key
 openai_api_key = st.secrets["OPENAI_API_KEY"]
@@ -29,9 +31,6 @@ openai_chat = ChatOpenAI(openai_api_key=openai_api_key, model_name=model)
 
 # Streamlit Title
 st.title("🤖 Best Assistant")
-
-# Streamlit Layout
-st.set_page_config(layout="wide")
 
 # System Prompt
 system_prompt = """
