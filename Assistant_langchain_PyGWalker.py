@@ -30,6 +30,9 @@ openai_chat = ChatOpenAI(openai_api_key=openai_api_key, model_name=model)
 # Streamlit Title
 st.title("🤖 Best Assistant")
 
+# Streamlit Layout
+st.set_page_config(layout="wide")
+
 # System Prompt
 system_prompt = """
 You are a helpful assistant.
