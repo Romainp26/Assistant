@@ -10,3 +10,4 @@ easyocr
 numpy
 matplotlib
 pygwalker
+openpyxl
