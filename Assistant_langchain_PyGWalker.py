@@ -19,7 +19,7 @@ st.set_page_config(layout="wide")
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 # List of models
-models = ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo", "ChatGPT-4o", "gpt-4.1"]
+models = ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo", "gpt-4.1"]
 
 # Create a select box for the models
 st.session_state["openai_model"] = st.sidebar.selectbox("Select OpenAI model", models, index=0)
