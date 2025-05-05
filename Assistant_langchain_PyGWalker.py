@@ -26,7 +26,13 @@ st.session_state["openai_model"] = st.sidebar.selectbox("Select OpenAI model", m
 model=st.session_state["openai_model"]
 
 # Initialize LangChain OpenAI Client
-openai_chat = ChatOpenAI(openai_api_key=openai_api_key, model_name=model)
+openai_chat = ChatOpenAI(openai_api_key=openai_api_key, model_name=model, temperature = 0.7)
+
+# reasoning = {
+#                 "effort": "medium",  # 'low', 'medium', or 'high'
+#                 "summary": "auto",  # 'detailed', 'auto', or None
+#             }
+#openai_chat = ChatOpenAI(openai_api_key=openai_api_key, model_name=model, model_kwargs={"top_p": 0.9, "reasoning": reasoning})
 
 
 # Streamlit Title
